@@ -1,0 +1,15 @@
+<div class="container agents">
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Operations</h3>
+			<ul class="list-group">
+				<li ng-repeat="operation in operations | orderBy: '-date'" class="list-group-item">
+					<a ng-href="/operations/{{operation.operationId}}" class="row">
+						<span ng-bind="operation.date | date: mediumDate" class="col-xs-6"></span>
+						<span ng-bind="(((operation.type ==1)? 1 : -1 )*operation.sum) | currency : symbol : fractionSize" class="currency col-xs-6"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

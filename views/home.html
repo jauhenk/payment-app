@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-primary">
+	            <div class="panel-heading">
+	            	<h3 class="panel-title">Balanse</h3>
+	            </div>
+	            <div class="panel-body">
+	             	{{balanse | currency : symbol : fractionSize}}
+	            </div>
+	          </div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="panel panel-warning">
+	            <div class="panel-heading">
+	            	<h3 class="panel-title">Credit</h3>
+	            </div>
+	            <div class="panel-body">
+	             	{{credit | currency : symbol : fractionSize}}
+	            </div>
+	          </div>
+		</div>
+		<div class="col-xs-6">
+			<div class="panel panel-success">
+	            <div class="panel-heading">
+	            	<h3 class="panel-title">Debet</h3>
+	            </div>
+	            <div class="panel-body">
+	             	{{debt | currency : symbol : fractionSize}}
+	            </div>
+	          </div>
+		</div>
+	</div>
+</div>

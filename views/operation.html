@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Operation Sum</div>
+			<div class="panel-body">
+				{{operation.sum | currency : symbol : fractionSize}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Operation Type</div>
+			<div class="panel-body">
+				{{operation.type === 1?'Debet' : 'Credit'}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Operation by</div>
+			<div class="panel-body">
+				{{agent.name}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Description</div>
+			<div class="panel-body">
+				{{operation.description}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Data</div>
+			<div class="panel-body">
+				{{operation.date | date: mediumDate}}
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+</div>

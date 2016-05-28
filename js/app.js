@@ -1,0 +1,1 @@
+angular.module('payment', ['ngRoute', 'appRoutes', 'controllers', 'services']);

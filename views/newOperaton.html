@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<form class="col-xs-12">
+			<div class="form-group">
+				<label for="unpId">Agent</label>
+				<select ng-model="operation.unpId" class="form-control">
+					<option ng-repeat="agent in agents" value="{{agent.unpId}}">{{agent.name}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="sum">Sum</label>
+				<div class="input-group">
+					<div class="input-group-addon">$</div>
+					<input type="number" class="form-control" id="sum" placeholder="Sum" ng-model="operation.sum">
+					<div class="input-group-addon">.00</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="unpId">Operation Type</label>
+				<select ng-model="operation.type" class="form-control">
+					<option value="1" selected="selected">Debet</option>
+					<option value="2">Credit</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<textarea class="form-control" rows="3" id="description" placeholder="Description" ng-model="operation.description"></textarea>
+			</div>
+			<div class="form-group">
+				<button class="col-xs-4 col-xs-offset-8 btn btn-success" ng-click="create()">Create</button>
+			</div>
+		<form>
+	</div>
+</div>

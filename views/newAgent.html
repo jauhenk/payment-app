@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<form class="col-xs-12">
+			<div class="form-group">
+				<label for="unpId">UNP</label>
+				<input type="number" class="form-control" id="unpId" placeholder="UNP" ng-model="agent.unpId">
+			</div>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Name" ng-model="agent.name">
+			</div>
+			<div class="form-group">
+				<label for="address">Address</label>
+				<textarea class="form-control" rows="3" id="address" placeholder="Address" ng-model="agent.address"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="contract">Contract</label>
+				<input type="input" class="form-control" id="contract" placeholder="Contract" ng-model="agent.contract">
+			</div>
+			<div class="form-group">
+				<label for="paymentDelay">Payment Delay</label>
+				<input type="number" class="form-control" id="paymentDelay" placeholder="Payment Delay" ng-model="agent.paymentDelay">
+			</div>
+			<div class="form-group">
+				<button class="col-xs-4 col-xs-offset-8 btn btn-success" ng-click="create()">Create</button>
+			</div>
+		</form>
+	</div>
+</div>

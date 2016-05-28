@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+	<div class="col-xs-12">
+		<h3>{{agent.name}}</h3>
+		<div class="panel panel-default">
+			<div class="panel-heading">UNP</div>
+			<div class="panel-body">
+				{{agent.unpId}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Contract</div>
+			<div class="panel-body">
+				{{agent.contract}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Address</div>
+			<div class="panel-body">
+				{{agent.address}}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Operations</div>
+			<ul class="list-group">
+				<li ng-repeat="operation in operations | orderBy: 'date'" class="list-group-item">
+					<a ng-href="/operations/{{operation.operationId}}" class="row">
+						<span class="col-xs-6">{{(((operation.type ==1)? 1 : -1 )*operation.sum) | currency : symbol : fractionSize}}</span>
+						<span class="col-xs-6">{{operation.date | date: mediumDate}}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</div>
